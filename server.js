@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 
 
 sequelize.sync().then(() => {
-  app.listen(5000, () => {
+  app.listen(process.env.port, () => {
     console.log('Server running on http://localhost:5000');
   });
 });
