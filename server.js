@@ -39,14 +39,7 @@ app.use('/api/contentRoutes', contentRoutes);
 app.use('/api/pages', pageRoutes);
 app.use("/api/home-content", homeContentRoutes);
 
-module.exports = (req, res) => {
-    if (req.url === '/') {
-        res.end('Backend Working!');
-    } else {
-        res.statusCode = 404;
-        res.end('Not Found');
-    }
-};
+
 
 
 sequelize.sync().then(() => {
