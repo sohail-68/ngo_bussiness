@@ -39,7 +39,9 @@ app.use('/api/contentRoutes', contentRoutes);
 app.use('/api/pages', pageRoutes);
 app.use("/api/home-content", homeContentRoutes);
 
-
+app.get("/", (req, res) => {
+  res.send("Backend Working!");
+});
 
 
 sequelize.sync().then(() => {
